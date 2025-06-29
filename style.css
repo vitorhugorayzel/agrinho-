@@ -183,3 +183,14 @@ footer {
         gap: 15px;
     }
 }
+.subtitle {
+    font-size: 1.6rem;
+    color: var(--green);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+#sobre p {
+    margin-bottom: 1.2rem;
+    text-align: justify;
+}
