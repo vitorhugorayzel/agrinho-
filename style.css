@@ -1,83 +1,107 @@
-/* Reset e fonte */
+:root {
+    --green: #7cb342;
+    --dark-green: #558b2f;
+    --yellow: #fdd835;
+    --beige: #f5f5dc;
+    --light: #fafafa;
+    --gray: #333;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
+    color: var(--gray);
+    background-color: var(--light);
     line-height: 1.6;
-    color: #333;
-    background-color: #fefefe;
 }
 
-/* Hero header */
+/* Hero section */
 .hero {
     background: url('img/header-bg.jpg') center/cover no-repeat;
     height: 100vh;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    color: #fff;
-    text-align: center;
 }
 
-.hero-overlay {
-    background-color: rgba(0, 0, 0, 0.55);
+.overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    color: #fff;
+    text-align: center;
     padding: 2rem;
-    border-radius: 8px;
+    animation: fadeIn 1.5s ease-out;
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
+    line-height: 1.2;
 }
 
 .hero h1 span {
-    color: #f3d250;
+    color: var(--yellow);
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin: 1rem 0;
+    margin-top: 1rem;
+    font-size: 1.3rem;
 }
 
 .btn {
-    display: inline-block;
-    background-color: #8fcf7b;
-    color: #fff;
-    padding: 10px 20px;
+    margin-top: 1.5rem;
+    background-color: var(--green);
+    color: white;
+    padding: 12px 25px;
     text-decoration: none;
+    border-radius: 5px;
     font-weight: bold;
-    border-radius: 4px;
-    transition: 0.3s;
+    transition: background 0.3s;
 }
 
 .btn:hover {
-    background-color: #76b667;
+    background-color: var(--dark-green);
 }
 
-/* Navigation */
+/* Navbar */
 .navbar {
-    background-color: #f3d250;
+    background-color: var(--yellow);
     padding: 10px 0;
-    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px var(--shadow);
 }
 
 .navbar ul {
+    display: flex;
+    justify-content: center;
     list-style: none;
-}
-
-.navbar li {
-    display: inline;
-    margin: 0 15px;
+    gap: 30px;
 }
 
 .navbar a {
+    color: var(--gray);
+    font-weight: 500;
     text-decoration: none;
-    color: #333;
-    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--dark-green);
 }
 
 /* Sections */
@@ -85,46 +109,77 @@ body {
     padding: 60px 20px;
 }
 
-.section.light {
-    background-color: #f9f9f9;
+.bg-light {
+    background-color: var(--light);
 }
 
 .container {
     max-width: 1100px;
-    margin: auto;
+    margin: 0 auto;
+}
+
+h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: var(--dark-green);
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
-    margin-top: 30px;
 }
 
 .card {
     background-color: #fff;
     padding: 20px;
-    border-left: 6px solid #8fcf7b;
-    border-radius: 5px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border-left: 5px solid var(--green);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.contact-list {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.contact-list a {
+    color: var(--green);
+    text-decoration: none;
 }
 
 /* Footer */
 footer {
+    background-color: var(--beige);
     text-align: center;
     padding: 20px;
-    background-color: #f3d250;
-    color: #333;
     font-size: 0.9rem;
+    margin-top: 60px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
 /* Responsivo */
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     .hero p {
         font-size: 1rem;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 15px;
     }
 }

@@ -1,72 +1,82 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Festejando a Conexão Campo-Cidade</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
     <header class="hero">
-        <div class="hero-overlay">
-            <h1>Festejando a Conexão<br><span>Campo-Cidade</span></h1>
-            <p>Tradições rurais e urbanas se encontram em um só lugar</p>
-            <a href="#sobre" class="btn">Saiba Mais</a>
+        <div class="overlay">
+            <div class="hero-content">
+                <h1><span>Festejando</span> a Conexão<br>Campo-Cidade</h1>
+                <p>Natureza e urbanismo se encontram para inspirar o futuro</p>
+                <a href="#sobre" class="btn">Descubra Mais</a>
+            </div>
         </div>
     </header>
 
     <nav class="navbar">
-        <ul>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#programacao">Programação</a></li>
-            <li><a href="#contato">Contato</a></li>
-        </ul>
+        <div class="container">
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#programacao">Programação</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
     </nav>
 
     <main>
-        <section id="sobre" class="section light">
+        <section id="sobre" class="section">
             <div class="container">
                 <h2>🌿 Sobre o Evento</h2>
-                <p>O festival celebra a conexão entre o campo e a cidade por meio da cultura, gastronomia, arte e sustentabilidade. É um espaço para trocas de saberes, experiências e celebração da diversidade brasileira.</p>
+                <p>O festival "Campo-Cidade" celebra a troca entre o urbano e o rural com foco em sustentabilidade, cultura e integração. A proposta é construir pontes entre modos de vida e criar soluções conjuntas para o futuro.</p>
             </div>
         </section>
 
-        <section id="programacao" class="section">
-            <div class="container grid">
-                <div class="card">
-                    <h3>🥕 Feira de Produtos</h3>
-                    <p>Alimentos frescos, orgânicos e artesanais direto dos produtores rurais.</p>
-                </div>
-                <div class="card">
-                    <h3>🎭 Apresentações Culturais</h3>
-                    <p>Música, dança e teatro conectando raízes urbanas e rurais.</p>
-                </div>
-                <div class="card">
-                    <h3>🌱 Oficinas Sustentáveis</h3>
-                    <p>Aprenda sobre compostagem, hortas urbanas e agroecologia.</p>
-                </div>
-                <div class="card">
-                    <h3>👧 Espaço Infantil</h3>
-                    <p>Atividades lúdicas e educativas para os pequenos.</p>
+        <section id="programacao" class="section bg-light">
+            <div class="container">
+                <h2>🎉 Programação</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>🥕 Feira de Produtos</h3>
+                        <p>Alimentos orgânicos e artesanato local direto do produtor.</p>
+                    </div>
+                    <div class="card">
+                        <h3>🎭 Cultura Popular</h3>
+                        <p>Shows, folclore e apresentações que celebram raízes brasileiras.</p>
+                    </div>
+                    <div class="card">
+                        <h3>🌱 Oficinas Ecológicas</h3>
+                        <p>Aprenda sobre agroecologia, hortas urbanas e compostagem.</p>
+                    </div>
+                    <div class="card">
+                        <h3>👧 Espaço Criança</h3>
+                        <p>Brincadeiras educativas, contação de histórias e natureza.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="contato" class="section light">
+        <section id="contato" class="section">
             <div class="container">
                 <h2>📬 Contato</h2>
-                <p>Tem dúvidas ou quer participar?</p>
-                <p><strong>Email:</strong> contato@campocidade.org</p>
-                <p><strong>Instagram:</strong> <a href="#">@campocidade</a></p>
+                <p>Quer participar ou tirar dúvidas? Fale com a gente:</p>
+                <ul class="contact-list">
+                    <li><strong>Email:</strong> contato@campocidade.org</li>
+                    <li><strong>Instagram:</strong> <a href="#">@campocidade</a></li>
+                </ul>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Festejando a Conexão Campo-Cidade. Todos os direitos reservados.</p>
+        <div class="container">
+            <p>&copy; 2025 Festejando a Conexão Campo-Cidade. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
 </body>
